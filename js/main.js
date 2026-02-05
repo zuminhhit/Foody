@@ -6,8 +6,8 @@ async function loadPage(name) {
 
   if (name === "home") {
     const page = await import(`./page/home.js`);
-    console.log(page);
     page.initHome();
+    page.initFooterYear();
   }
 }
 
