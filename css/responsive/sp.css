@@ -1,0 +1,7 @@
+@media (max-width: 991px) {
+  .Responsive {
+    max-width: 991px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

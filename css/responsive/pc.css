@@ -1,0 +1,13 @@
+@media (min-width: 992px) {
+  .Responsive {
+    min-width: 992px;
+  }
+
+  .u-pc {
+    display: block;
+  }
+
+  .u-sp {
+    display: none;
+  }
+}
