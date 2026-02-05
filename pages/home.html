@@ -1,0 +1,89 @@
+<!-- Header -->
+<header class="Header">
+  <div class="Responsive">
+    <div class="Header__container">
+      <div class="Header__logo">
+        <img src="assets/images/logo/logo-foody.png" alt="Foody"
+        class="Header__logo--size"
+        decoding="sync" fetchpriority="high" loading="eager"
+        >
+      </div>
+
+      <div class="Header-right">
+        <!-- Nav (PC) -->
+        <nav class="pc Header__nav">
+          <ul class="Header__nav-list">
+            <li class="Header__nav-item">
+              <a href="#" class="Header__nav-link" data-prop44="header_pc_welcome_01">Welcome</a>
+            </li>
+            <li class="Header__nav-item">
+              <a href="#" class="Header__nav-link" data-prop44="header_pc_menu_01">Menu</a>
+              <ul class="Header__menu-dropdown">
+                <li class="Header__menu-item">
+                  <a class="Header__menu-item-link" href="#" data-prop44="header_pc_menu-breakfast_01">Breakfast</a>
+                </li>
+                <li class="Header__menu-item">
+                  <a class="Header__menu-item-link" href="#" data-prop44="header_pc_menu-lunch_01">Lunch</a>
+                </li>
+                <li class="Header__menu-item">
+                  <a class="Header__menu-item-link" href="#" data-prop44="header_pc_menu-dinner_01">Dinner</a>
+                </li>
+              </ul>
+            </li>
+            <li class="Header__nav-item">
+              <a href="" class="Header__nav-link" data-prop44="header_pc_video-tour_01">Video Tour</a>
+            </li>
+            <li class="Header__nav-item">
+              <a href="" class="Header__nav-link" data-prop44="header_pc_contact_01">Contact</a>
+            </li>
+          </ul> <!-- END UL -->
+        </nav><!-- END Nav PC -->
+
+        <!-- Social (PC only) -->
+        <div class="pc Header__social">
+          <a href="#" class="Header__social-link" aria-label="Facebook" data-prop44="header_pc_facebook_01">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a href="#" class="Header__social-link" aria-label="Instagram" data-prop44="header_pc_instagram_01">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="Header__social-link" aria-label="Twitter" data-prop44="header_pc_twitter_01">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div> <!-- END Header Right-->
+
+      <!-- Hamburger (SP) -->
+      <button class="sp Header__toggle js-headerToggle" aria-label="Open Menu">
+        <i class="Header__icon Header__icon--open fa-solid fa-bars"></i>
+        <i class="Header__icon Header__icon--close fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div><!-- END Container -->
+
+  <nav class="sp Header__sp-menu">
+    <ul class="Header__sp-list">
+      <li class="Header__sp-item"><a class="Header__sp-item-link" href="#" data-prop44="header_pc_welcome_01">Welcome</a></li>
+      <li class="Header__sp-item Header__sp-item--has-sub">
+        <button class="Header__sp-item-link Header__sp-item-link--unset-btn js-subToggle" data-prop44="header_pc_menu_01">
+          Menu
+          <span class="Header__sp-arrow">▾</span>
+        </button>
+        <ul class="Header__sp-sub">
+          <li class="Header__sp-sub-item">
+            <a class="Header__sp-sub-link" href="#" data-prop44="header_pc_menu-breakfast_01">Breakfast</a>
+          </li>
+          <li class="Header__sp-sub-item">
+            <a class="Header__sp-sub-link" href="#" data-prop44="header_pc_menu-lunch_01">Lunch</a>
+          </li>
+          <li class="Header__sp-sub-item">
+            <a class="Header__sp-sub-link" href="#" data-prop44="header_pc_menu-dinner_01">Dinner</a>
+          </li>
+        </ul>
+      </li>
+      <li class="Header__sp-item"><a class="Header__sp-item-link" href="#" data-prop44="header_pc_video-tour_01">Video Tour</a></li>
+      <li class="Header__sp-item"><a class="Header__sp-item-link" href="#" data-prop44="header_pc_contact_01">Contact</a></li>
+    </ul>
+  </nav><!-- END Nav sp-->
+</header>
+<!-- END Header -->
