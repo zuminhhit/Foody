@@ -8,6 +8,7 @@ async function loadPage(name) {
     const page = await import(`./page/home.js`);
     page.initHome();
     page.initFooterYear();
+    page.surfSlider();
   }
 }
 

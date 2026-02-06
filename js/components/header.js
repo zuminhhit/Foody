@@ -1,6 +1,6 @@
 export function toggleMenuHeader() {
   const header = document.querySelector(".Header");
-  const toggle = document.querySelector(".js-headerToggle");
+  const toggle = document.querySelector(".js-header-toggle");
   if (!header || !toggle) return;
 
   toggle.addEventListener("click", () => {

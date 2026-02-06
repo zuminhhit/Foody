@@ -7,7 +7,7 @@
 
 /* ===== Layout ===== */
 @import url('./layout/header.css');
-@import url('./layout/section.css');
+@import url('./layout/hero.css');
 @import url('./layout/footer.css');
 
 /* ===== Pages ===== */
@@ -20,5 +20,9 @@
 .Responsive {
   max-width: 100%;
   margin: 0 auto;
+}
+
+.Main {
+  flex: 1;
 }
 

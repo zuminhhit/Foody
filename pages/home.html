@@ -122,7 +122,7 @@
         </div> <!-- END Header Right-->
 
         <!-- Hamburger (SP) -->
-        <button class="sp Header__toggle js-headerToggle"
+        <button class="sp Header__toggle js-header-toggle"
           data-prop44="home-header_pc_btn_toggle_menu_01"
           aria-label="Open Menu"
           target="_blank"
@@ -161,6 +161,96 @@
   </header><!-- END Header -->
 
   <main class="Main">
+
+    <section class="Hero">
+      <!-- Background slider -->
+      <div class="Hero__bg js-hero-bg">
+        <div class="Hero__bg-track">
+          <div class="Hero__bg-slide is-active">
+            <img class="Hero__bg-slide-img" src="https://www.kellywearstler.com/on/demandware.static/-/Sites-KellyWearstler-Library/default/v1770073356668/images/02_Interiors/detail_pages/commercial/bg_restaurant/screen4.jpg"
+              alt="Slider 1"
+              decoding="sync"
+              fetchpriority="high"
+              loading="eager"
+            />
+          </div>
+          <div class="Hero__bg-slide">
+            <img class="Hero__bg-slide-img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
+              alt="Slider 1"
+              decoding="sync"
+              fetchpriority="high"
+              loading="eager"
+            />
+          </div>
+          <div class="Hero__bg-slide">
+            <img class="Hero__bg-slide-img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
+              alt="Slider 1"
+              decoding="sync"
+              fetchpriority="high"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Content slider -->
+      <div class="Hero__content">
+        <div class="Hero__content-track js-hero-content">
+          <div class="Hero__content-slide is-active">
+            <div class="Hero__content-inner">
+              <h1 class="Hero__title">It's a Food Adventure.</h1>
+              <span class="Hero__divider"></span>
+              <p class="Hero__desc">
+                You'll Never Put A Better<br />
+                Bit Of Food On Your Knife.
+              </p>
+            </div>
+          </div>
+
+          <div class="Hero__content-slide">
+            <div class="Hero__content-inner">
+              <h1 class="Hero__title">Discover Great Taste.</h1>
+              <span class="Hero__divider"></span>
+              <p class="Hero__desc">
+                Fresh Ingredients<br />
+                Crafted With Passion.
+              </p>
+            </div>
+          </div>
+
+          <div class="Hero__content-slide">
+            <div class="Hero__content-inner">
+              <h1 class="Hero__title">Enjoy The Moment.</h1>
+              <span class="Hero__divider"></span>
+              <p class="Hero__desc">
+                Food That Brings<br />
+                People Together.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="Hero__dots js-hero-dots">
+          <button class="Hero__dots-item is-active" aria-label="Hero Dot"></button>
+          <button class="Hero__dots-item" aria-label="Hero Dot"></button>
+          <button class="Hero__dots-item" aria-label="Hero Dot"></button>
+        </div>
+
+        <!-- Static Button -->
+        <a href="#menu" class="Hero__btn">OUR MENU</a>
+      </div>
+
+      <!-- Arrow -->
+      <button class="Hero__arrow Hero__arrow--prev js-hero-prev" aria-label="Previous slide">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+      </button>
+      <button class="Hero__arrow Hero__arrow--next js-hero-next" aria-label="Next slide">
+        <i class="fa-solid fa-circle-arrow-right"></i>
+      </button>
+
+    </section><!-- END Hero -->
+
 
   </main><!-- END Main -->
 
@@ -203,7 +293,7 @@
         <div class="Footer__container">
           <div class="Footer__bottom-inner">
             <p class="Footer__copyright">
-              Copyright <span id="js-getYear"></span> &copy; Foody - All Rights Reserved
+              Copyright <span id="js-get-year"></span> &copy; Foody - All Rights Reserved
             </p>
             <div class="Footer__social">
               <a href="https://www.facebook.com/" class="Footer__social-link"
