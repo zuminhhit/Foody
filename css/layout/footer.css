@@ -1,40 +1,108 @@
-.Footer {
-  font-size: 0.75rem;
-  color: #cfd6dd;
+:root {
+  --footer-main-bg: #243447;
+  --footer-bottom-bg: #1a1a1a;
+  --footer-text-color: #cfd6dd;
+  --footer-title-color: #ffffff;
+  --transition-speed: 0.3s;
 }
 
-.Footer__main {
-  background-color: #243447;
-  padding: 4rem 1rem;
+.Footer {
+  font-size: 0.5rem;
+  color: var(--footer-text-color);
 }
 
 .Footer__container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.Footer__main {
+  background-color: var(--footer-main-bg);
+  padding: 1rem;
+}
+
+.Footer__main-inner {
   display: flex;
-  justify-content: space-between;
-  gap: 4rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.Footer__desc-content {
+  display: flex;
+  gap: 2rem;
 }
 
 .Footer__title {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--footer-title-color);
+  text-align: left;
 }
 
 .Footer__text {
-  margin: 0 0 1rem;
   line-height: 1.6;
-  text-align: center;
+}
+
+.Footer__bottom {
+  background-color: var(--footer-bottom-bg);
+  padding: 1rem;
+}
+
+.Footer__bottom-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Footer__copyright {
+  margin-bottom: 0.5rem;
+}
+
+.Footer__social {
+  display: flex;
+  gap: 1rem;
 }
 
 .Footer__social-link {
-  color: #ffffff;
-  font-size: 18px;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
+  color: var(--footer-title-color);
   text-decoration: none;
+  display: inline-block;
+  transition: all var(--transition-speed) ease;
+}
+
+.Footer__social-link:hover {
+  opacity: 0.7;
+  transform: translateY(-3px);
+}
+
+@media screen and (min-width: 960px) {
+  .Footer {
+    font-size: 1rem;
+  }
+
+  .Footer__main {
+    padding: 2rem 1rem;
+  }
+
+  .Footer__main-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .Footer__title {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .Footer__bottom-inner {
+    flex-direction: row;
+  }
+
+  .Footer__copyright {
+    margin: 0;
+  }
 }
