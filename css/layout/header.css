@@ -3,7 +3,7 @@
 }
 
 .Header {
-  position: sticky;
+  position: relative;
   top: 0;
   min-height: var(--header-height);
   background: #5e5e5e;

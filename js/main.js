@@ -9,6 +9,8 @@ async function loadPage(name) {
     page.initHome();
     page.initFooterYear();
     page.surfSlider();
+    page.surfStorySlider();
+    page.enableStoryPreviewBox();
   }
 }
 

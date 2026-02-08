@@ -1,0 +1,46 @@
+.Quote {
+  position: relative;
+  z-index: 1;
+  margin-top: -3rem;
+}
+
+.Quote__container {
+  width: 100%;
+  min-height: 20vh;
+  padding: 2rem 1rem;
+  background-color: #1f2a33;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Quote__content {
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.Quote__text {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  quotes: "“" "”" "‘" "’";
+}
+
+.Quote__author {
+  font-size: 0.9rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.Quote__text::before {
+  content: open-quote;
+}
+.Quote__text::after {
+  content: close-quote;
+}
