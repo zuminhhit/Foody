@@ -1,0 +1,182 @@
+.Video {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.Video-container {
+  position: relative;
+  width: 100%;
+  height: 56vw;
+  max-height: 22rem;
+  min-height: 14rem;
+  overflow: hidden;
+}
+
+.Video-container__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Video-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  gap: 0.5rem;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.Video-overlay__title {
+  color: #fff;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.Video-overlay__btn {
+  position: relative;
+
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+
+  border: none;
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.Video-overlay__btn::before {
+  content: "";
+  position: absolute;
+  inset: -0.75rem;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+	z-index: -1;
+}
+
+.Video-overlay__btn-icon {
+	font-size: 1.25rem;
+	color: #000;
+}
+
+.Video-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+
+	pointer-events: none;
+	visibility: hidden;
+	transition: opacity 0.3s ease;
+}
+
+.Video-modal.is-active {
+	opacity: 1;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.Video-modal__backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.Video-modal-dialog {
+	position: relative;
+	width: 70%;
+	height: auto;
+	background: #111;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Video-modal-dialog__close {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.Video-modal-dialog-content {
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 16 / 9;
+	background: #000;
+}
+
+.Video-modal-dialog-content__video {
+	width: 100%;
+	height: 100%;
+	max-height: 80vh;
+	background: #000;
+}
+
+@media screen and (min-width: 960px) {
+  .Video-container {
+    height: 30rem;
+    max-height: none;
+    min-height: unset;
+  }
+
+  .Video-overlay {
+    gap: 1rem;
+  }
+
+  .Video-overlay__title {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .Video-overlay__btn {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .Video-overlay__btn::before {
+    inset: -1rem;
+  }
+
+  .Video-overlay__btn-icon {
+    font-size: 1.5rem;
+  }
+
+  .Video-modal-dialog {
+    width: 80%;
+    max-width: 960px;
+  }
+
+  .Video-modal-dialog-content__video {
+    max-height: 85vh;
+  }
+
+  .Video-modal-dialog__close {
+    top: 24px;
+    right: 24px;
+    font-size: 24px;
+  }
+}

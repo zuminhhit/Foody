@@ -4,11 +4,18 @@ import {
   toggleLockScroll,
 } from "../components/header.js";
 import { enableSwipe } from "../components/swipe_base.js";
+import { lockScroll, unlockScroll } from "../components/lock_scroll.js";
 
 export function initHome() {
   toggleMenuHeader();
   toggleHeaderSubMenu();
   toggleLockScroll();
+  initFooterYear();
+  surfSlider();
+  surfStorySlider();
+  enableStoryPreviewBox();
+  toggleVideoModal();
+  toggleLockScrollPlayVideo();
   blockDefaultClickLink(".js-blockSubmit");
 }
 
@@ -27,6 +34,24 @@ function blockDefaultClickLink(className) {
       e.preventDefault();
     });
   }
+}
+
+export function toggleLockScrollPlayVideo() {
+  const modal = document.querySelector(".js-toggle-video-modal");
+  const playVideo = document.querySelector(".js-play-video");
+  const closeBtns = modal.querySelectorAll(
+    ".js-close-video-modal, .js-close-outside-video-modal"
+  );
+
+  playVideo.addEventListener("click", () => {
+    lockScroll();
+  });
+
+  closeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      unlockScroll();
+    });
+  });
 }
 
 export function surfSlider() {
@@ -247,4 +272,34 @@ export function enableStoryPreviewBox() {
   });
 
   document.addEventListener("click", hidePreview);
+}
+
+export function toggleVideoModal() {
+  const modal = document.querySelector(".js-toggle-video-modal");
+  const videoPlay = document.querySelector(".js-play-video");
+  const backdrop = modal.querySelector(".js-close-outside-video-modal");
+  const closeBtn = modal.querySelector(".js-close-video-modal");
+  const video = modal.querySelector(".js-reset-process-video");
+
+  function openModal() {
+    modal.classList.add("is-active");
+    video.currentTime = 0;
+    video.play();
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-active");
+    video.pause();
+    video.currentTime = 0;
+  }
+
+  backdrop.addEventListener("click", closeModal);
+  closeBtn.addEventListener("click", closeModal);
+  videoPlay.addEventListener("click", openModal);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-active")) {
+      closeModal();
+    }
+  });
 }

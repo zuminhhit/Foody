@@ -31,7 +31,7 @@
 /* ===== ITEM ===== */
 .Menu-list-item {
   aspect-ratio: 1 / 1;
-  background: #ffffff; /* ô trắng mặc định */
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -7,10 +7,6 @@ async function loadPage(name) {
   if (name === "home") {
     const page = await import(`./page/home.js`);
     page.initHome();
-    page.initFooterYear();
-    page.surfSlider();
-    page.surfStorySlider();
-    page.enableStoryPreviewBox();
   }
 
   (function () {

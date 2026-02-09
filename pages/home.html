@@ -391,7 +391,7 @@
         <div class="Menu-title">
           <p class="Menu-title__header">We Present You Our Menu</p>
         </div>
-        <div class="Menu-list">
+        <!-- <div class="Menu-list">
           <div class="Menu-list-item">
             <p class="Menu-list-item__name">Pizza Margherita</p>
             <p class="Menu-list-item__desc">
@@ -440,7 +440,8 @@
             <span class="Menu-list-item__price">$19.99</span>
           </div>
 
-        </div><!-- END Menu List -->
+        </div> -->
+        <!-- END Menu List -->
         <div class="Menu-show-more">
           <p class="Menu-show-more__title">Show Me More</p>
           <button class="Menu-show-more--toggle"
@@ -453,6 +454,45 @@
       </div>
     </section>
     <!-- END Menu-->
+
+    <section class="Video">
+      <div class="Video-container">
+        <video src="/Foody/assets/videos/file_example.mp4"
+          preload="none"
+          class="Video-container__bg"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+        </video>
+        <div class="Video-overlay">
+          <p class="Video-overlay__title">See it for your self</p>
+          <button class="Video-overlay__btn js-play-video">
+            <i class="Video-overlay__btn-icon fa-solid fa-play"></i>
+          </button>
+        </div>
+      </div><!-- END Video Container -->
+      <div class="Video-modal js-toggle-video-modal">
+        <div class="Video-modal__backdrop js-close-outside-video-modal"></div>
+        <div class="Video-modal-dialog">
+          <button class="Video-modal-dialog__close js-close-video-modal">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <div class="Video-modal-dialog-content">
+            <video src="/Foody/assets/videos/file_example.mp4"
+              class="Video-modal-dialog-content__video js-reset-process-video"
+              preload="none"
+              controls
+              autoplay
+              muted
+              playsinline
+            >
+            </video>
+          </div>
+        </div>
+      </div><!-- END Video Modal -->
+    </section><!-- END Video -->
     <section class="Newsletter">
       <div class="Newsletter-container">
         <div class="Newsletter__title">Stay up to date</div>
@@ -501,9 +541,9 @@ Donec sollicitudin molestie malesuada.</div>
               height="350"
             />
           </div>
-        </div>
-      </div>
-    </section>
+        </div><!-- END Newsletter Media -->
+      </div><!-- END Newsletter Container -->
+    </section><!-- END Newsletter -->
   </main><!-- END Main -->
   <footer class="Footer">
       <div class="Footer-main">
