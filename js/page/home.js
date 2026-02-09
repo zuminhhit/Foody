@@ -1,8 +1,14 @@
-import { toggleMenuHeader, toggleHeaderSubMenu } from "../components/header.js";
+import {
+  toggleMenuHeader,
+  toggleHeaderSubMenu,
+  toggleLockScroll,
+} from "../components/header.js";
+import { enableSwipe } from "../components/swipe_base.js";
 
 export function initHome() {
   toggleMenuHeader();
   toggleHeaderSubMenu();
+  toggleLockScroll();
 }
 
 export function initFooterYear() {
@@ -18,7 +24,7 @@ export function surfSlider() {
   const dots = document.querySelectorAll(".Hero__dots-item");
   const prev = document.querySelector(".js-hero-prev");
   const next = document.querySelector(".js-hero-next");
-  const hero = document.querySelector(".Hero");
+  const hero = document.querySelector(".js-hero-slider");
 
   if (!bgSlides.length) return;
 
@@ -75,15 +81,27 @@ export function surfSlider() {
   if (hero) {
     hero.addEventListener("mouseenter", stopAuto);
     hero.addEventListener("mouseleave", startAuto);
+
+    enableSwipe({
+      element: hero,
+      onSwipeLeft: () => {
+        goTo(index + 1);
+        startAuto();
+      },
+      onSwipeRight: () => {
+        goTo(index - 1);
+        startAuto();
+      },
+    });
   }
 
   startAuto();
 }
 
 export function surfStorySlider() {
-  const descs = document.querySelectorAll('.Story__desc');
-  const dots = document.querySelectorAll('.Story__dots-item');
-  const storyContent = document.querySelector('.Story__content');
+  const descs = document.querySelectorAll(".Story__desc");
+  const dots = document.querySelectorAll(".Story__dots-item");
+  const storyContent = document.querySelector(".js-story-swipe-slider");
   const total = descs.length;
 
   if (!total) return;
@@ -91,20 +109,22 @@ export function surfStorySlider() {
   let current = 0;
   let timer = null;
   let isPreviewOpen = false;
-  const INTERVAL = 3000;
+  const INTERVAL = 1000;
 
-  function showSlide(i) {
-    descs.forEach(d => d.classList.remove('is-active'));
-    dots.forEach(d => d.classList.remove('is-active'));
+  function goTo(i) {
+    const nextIndex = (i + total) % total;
 
-    descs[i].classList.add('is-active');
-    dots[i].classList.add('is-active');
+    descs[current].classList.remove("is-active");
+    dots[current].classList.remove("is-active");
 
-    current = i;
+    descs[nextIndex].classList.add("is-active");
+    dots[nextIndex].classList.add("is-active");
+
+    current = nextIndex;
   }
 
   function nextSlide() {
-    showSlide((current + 1) % total);
+    goTo(current + 1);
   }
 
   function startAuto() {
@@ -113,88 +133,97 @@ export function surfStorySlider() {
   }
 
   function stopAuto() {
+    if (!timer) return;
     clearInterval(timer);
     timer = null;
   }
 
-  document.addEventListener('story:preview-open', () => {
+  document.addEventListener("story:preview-open", () => {
     isPreviewOpen = true;
     stopAuto();
   });
 
-  document.addEventListener('story:preview-close', () => {
+  document.addEventListener("story:preview-close", () => {
     isPreviewOpen = false;
     startAuto();
   });
 
   dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      showSlide(i);
+    dot.addEventListener("click", () => {
+      goTo(i);
       stopAuto();
     });
   });
 
-  showSlide(0);
-  startAuto();
-
   if (!storyContent) return;
 
-  storyContent.addEventListener('mouseenter', stopAuto);
-
-  storyContent.addEventListener('mouseleave', () => {
-    if (isPreviewOpen) return;
-    startAuto();
+  storyContent.addEventListener("mouseover", stopAuto);
+  storyContent.addEventListener("mouseout", () => {
+    if (!isPreviewOpen) startAuto();
   });
+
+  enableSwipe({
+    element: storyContent,
+    onSwipeLeft() {
+      goTo(current + 1);
+      startAuto();
+    },
+    onSwipeRight() {
+      goTo(current - 1);
+      startAuto();
+    },
+  });
+
+  goTo(0);
+  startAuto();
 }
 
 export function enableStoryPreviewBox() {
-  const descs = document.querySelectorAll('.Story__desc');
-  const previewBox = document.getElementById('storyPreview');
-  const previewContent = previewBox?.querySelector('.Story__preview-content');
+  const descs = document.querySelectorAll(".Story__desc");
+  const previewBox = document.getElementById("storyPreview");
+  const previewContent = previewBox?.querySelector(".Story__preview-content");
 
   if (!previewBox || !previewContent) return;
 
-  const isTouch = window.matchMedia('(pointer: coarse)').matches;
+  const isTouch = window.matchMedia("(pointer: coarse)").matches;
 
   function isClamped(el) {
     return el.scrollHeight > el.clientHeight + 1;
   }
 
-
   function showPreview(desc) {
     previewContent.textContent = desc.textContent;
-    previewBox.classList.add('is-show');
+    previewBox.classList.add("is-show");
 
-    document.dispatchEvent(new CustomEvent('story:preview-open'));
+    document.dispatchEvent(new CustomEvent("story:preview-open"));
   }
 
   function hidePreview() {
-    if (!previewBox.classList.contains('is-show')) return;
+    if (!previewBox.classList.contains("is-show")) return;
 
-    previewBox.classList.remove('is-show');
+    previewBox.classList.remove("is-show");
 
-    document.dispatchEvent(new CustomEvent('story:preview-close'));
+    document.dispatchEvent(new CustomEvent("story:preview-close"));
   }
 
-  descs.forEach(desc => {
+  descs.forEach((desc) => {
     requestAnimationFrame(() => {
       if (!isClamped(desc)) return;
 
-      desc.classList.add('is-clamped');
+      desc.classList.add("is-clamped");
 
       if (!isTouch) {
-        desc.addEventListener('mouseenter', () => showPreview(desc));
+        desc.addEventListener("mouseenter", () => showPreview(desc));
 
-        desc.addEventListener('mouseleave', e => {
-          console.log(e);
+        desc.addEventListener("mouseleave", (e) => {
           if (previewBox.contains(e.relatedTarget)) return;
           hidePreview();
         });
       } else {
-        desc.addEventListener('click', e => {
+        desc.addEventListener("click", (e) => {
           e.stopPropagation();
 
-          previewBox.classList.contains('is-show')
+          previewBox.classList.contains("is-show")
             ? hidePreview()
             : showPreview(desc);
         });
@@ -202,9 +231,9 @@ export function enableStoryPreviewBox() {
     });
   });
 
-  previewBox.addEventListener('mouseleave', () => {
+  previewBox.addEventListener("mouseleave", () => {
     hidePreview();
   });
 
-  document.addEventListener('click', hidePreview);
+  document.addEventListener("click", hidePreview);
 }

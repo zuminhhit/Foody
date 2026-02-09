@@ -83,8 +83,9 @@
   right: 0;
   line-height: 1.6rem;
   display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
   overflow: hidden;
 	margin: 0 2rem;
   opacity: 0;
@@ -98,6 +99,7 @@
 
 .Story__desc.is-expanded {
   -webkit-line-clamp: unset;
+    line-clamp: unset;
   overflow: visible;
 }
 
@@ -147,7 +149,7 @@
   visibility: hidden;
   pointer-events: none;
   transition: opacity .2s ease, transform .2s ease;
-  z-index: 9999;
+  z-index: 6; /* higher than story content */
   margin: 0;
 }
 
@@ -170,7 +172,6 @@
 	}
 
 	.Story__media-image {
-		height: 100%;
 		border-radius: 8px 0 0 8px;
 		height: 100%;
 	}

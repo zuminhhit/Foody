@@ -1,6 +1,6 @@
 .Quote {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* higher than bg slider */
   margin-top: -3rem;
 }
 

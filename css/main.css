@@ -19,12 +19,3 @@
 @import url('./responsive/pc.css');
 @import url('./responsive/sp.css');
 
-.Responsive {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.Main {
-  flex: 1;
-}
-

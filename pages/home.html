@@ -136,26 +136,77 @@
 
     <nav class="sp Header__sp-menu">
       <ul class="Header__sp-list">
-        <li class="Header__sp-item"><a class="Header__sp-item-link" href="#" data-prop44="home-header_pc_welcome_01">Welcome</a></li>
+        <li class="Header__sp-item">
+          <a class="Header__sp-item-link"
+            href="#"
+            data-prop44="home-header_pc_welcome_01"
+            target="_blank"
+            rel="external nofollow noopener noreferrer"
+            aria-label="Welcome"
+          >
+            Welcome
+          </a>
+        </li>
         <li class="Header__sp-item Header__sp-item--has-sub">
-          <button class="Header__sp-item-link Header__sp-item-link--unset-btn js-subToggle" data-prop44="home-header_pc_menu_01">
+          <button class="Header__sp-item-link Header__sp-item-link--unset-btn js-sub-toggle"
+            data-prop44="home-header_pc_menu_01"
+            aria-label="Menu"
+          >
             Menu
             <i class="fa-solid fa-caret-down Header__sp-arrow"></i>
           </button>
           <ul class="Header__sp-sub">
             <li class="Header__sp-sub-item">
-              <a class="Header__sp-sub-link" href="#" data-prop44="home-header_pc_menu-breakfast_01">Breakfast</a>
+              <a class="Header__sp-sub-link" href="#"
+              data-prop44="home-header_pc_menu-breakfast_01"
+              aria-label="Breakfast"
+              target="_blank"
+              rel="external nofollow noopener noreferrer"
+            >
+              Breakfast
+            </a>
             </li>
             <li class="Header__sp-sub-item">
-              <a class="Header__sp-sub-link" href="#" data-prop44="home-header_pc_menu-lunch_01">Lunch</a>
+              <a class="Header__sp-sub-link" href="#"
+                data-prop44="home-header_pc_menu-lunch_01"
+                target="_blank"
+                rel="external nofollow noopener noreferrer"
+              >
+                Lunch
+              </a>
             </li>
             <li class="Header__sp-sub-item">
-              <a class="Header__sp-sub-link" href="#" data-prop44="home-header_pc_menu-dinner_01">Dinner</a>
+              <a class="Header__sp-sub-link" href="#"
+                data-prop44="home-header_pc_menu-dinner_01"
+                target="_blank"
+                rel="external nofollow noopener noreferrer"
+                aria-label="Dinner"
+              >
+                Dinner
+              </a>
             </li>
           </ul>
         </li>
-        <li class="Header__sp-item"><a class="Header__sp-item-link" href="#" data-prop44="home-header_pc_video-tour_01">Video Tour</a></li>
-        <li class="Header__sp-item"><a class="Header__sp-item-link" href="#" data-prop44="home-header_pc_contact_01">Contact</a></li>
+        <li class="Header__sp-item">
+          <a class="Header__sp-item-link" href="#"
+            data-prop44="home-header_pc_video-tour_01"
+            target="_blank"
+            rel="external nofollow noopener noreferrer"
+            aria-label="Video Tour"
+          >
+            Video Tour
+          </a>
+        </li>
+        <li class="Header__sp-item">
+          <a class="Header__sp-item-link" href="#"
+            data-prop44="home-header_pc_contact_01"
+            target="_blank"
+            rel="external nofollow noopener noreferrer"
+            aria-label="Contact"
+          >
+            Contact
+          </a>
+        </li>
       </ul>
     </nav><!-- END Nav sp-->
   </header><!-- END Header -->
@@ -163,106 +214,146 @@
   <main class="Main">
 
     <section class="Hero">
-      <!-- Background slider -->
-      <div class="Hero__bg js-hero-bg">
-        <div class="Hero__bg-track">
-          <div class="Hero__bg-slide is-active">
-            <img class="Hero__bg-slide-img" src="https://www.kellywearstler.com/on/demandware.static/-/Sites-KellyWearstler-Library/default/v1770073356668/images/02_Interiors/detail_pages/commercial/bg_restaurant/screen4.jpg"
-              alt="Slider 1"
-              decoding="sync"
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
-          <div class="Hero__bg-slide">
-            <img class="Hero__bg-slide-img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
-              alt="Slider 1"
-              decoding="sync"
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
-          <div class="Hero__bg-slide">
-            <img class="Hero__bg-slide-img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
-              alt="Slider 1"
-              decoding="sync"
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!-- Content slider -->
-      <div class="Hero__content">
-        <div class="Hero__content-track js-hero-content">
-          <div class="Hero__content-slide is-active">
-            <div class="Hero__content-inner">
-              <h1 class="Hero__title">It's a Food Adventure.</h1>
-              <span class="Hero__divider"></span>
-              <p class="Hero__desc">
-                You'll Never Put A Better<br />
-                Bit Of Food On Your Knife.
-              </p>
+      <div class="Hero__container js-hero-slider">
+        <!-- Background slider -->
+        <div class="Hero__bg js-hero-bg">
+          <div class="Hero__bg-track">
+            <div class="Hero__bg-slide is-active">
+              <img class="Hero__bg-slide-img" src="https://www.kellywearstler.com/on/demandware.static/-/Sites-KellyWearstler-Library/default/v1770073356668/images/02_Interiors/detail_pages/commercial/bg_restaurant/screen4.jpg"
+                alt="Slider 1"
+                decoding="sync"
+                fetchpriority="high"
+                loading="eager"
+              />
             </div>
-          </div>
-
-          <div class="Hero__content-slide">
-            <div class="Hero__content-inner">
-              <h1 class="Hero__title">Discover Great Taste.</h1>
-              <span class="Hero__divider"></span>
-              <p class="Hero__desc">
-                Fresh Ingredients<br />
-                Crafted With Passion.
-              </p>
+            <div class="Hero__bg-slide">
+              <img class="Hero__bg-slide-img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
+                alt="Slider 1"
+                decoding="async"
+                fetchpriority="high"
+                loading="lazy"
+              />
             </div>
-          </div>
-
-          <div class="Hero__content-slide">
-            <div class="Hero__content-inner">
-              <h1 class="Hero__title">Enjoy The Moment.</h1>
-              <span class="Hero__divider"></span>
-              <p class="Hero__desc">
-                Food That Brings<br />
-                People Together.
-              </p>
+            <div class="Hero__bg-slide">
+              <img class="Hero__bg-slide-img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
+                alt="Slider 1"
+                decoding="async"
+                fetchpriority="high"
+                loading="lazy"
+              />
             </div>
+          </div><!-- END BG Track-->
+        </div><!-- END Hero BG-->
+
+        <!-- Content slider -->
+        <div class="Hero__content">
+          <div class="Hero__content-track js-hero-content">
+            <div class="Hero__content-slide is-active">
+              <div class="Hero__content-inner">
+                <h1 class="Hero__title">It's a Food Adventure.</h1>
+                <span class="Hero__divider"></span>
+                <p class="Hero__desc">
+                  You'll Never Put A Better<br />
+                  Bit Of Food On Your Knife.
+                </p>
+              </div>
+            </div>
+
+            <div class="Hero__content-slide">
+              <div class="Hero__content-inner">
+                <h1 class="Hero__title">Discover Great Taste.</h1>
+                <span class="Hero__divider"></span>
+                <p class="Hero__desc">
+                  Fresh Ingredients<br />
+                  Crafted With Passion.
+                </p>
+              </div>
+            </div>
+
+            <div class="Hero__content-slide">
+              <div class="Hero__content-inner">
+                <h1 class="Hero__title">Enjoy The Moment.</h1>
+                <span class="Hero__divider"></span>
+                <p class="Hero__desc">
+                  Food That Brings<br />
+                  People Together.
+                </p>
+              </div>
+            </div>
+          </div><!-- END Hero Content Track -->
+
+          <!-- Dots -->
+          <div class="Hero__dots js-hero-dots">
+            <button class="Hero__dots-item is-active"
+              aria-label="Hero Dot"
+              data-prop44="home-hero_pc_sp_dots-slider_01"
+            >
+            </button>
+            <button class="Hero__dots-item"
+              aria-label="Hero Dot"
+              data-prop44="home-hero_pc_sp_dots-slider_02"
+            >
+            </button>
+            <button class="Hero__dots-item"
+              aria-label="Hero Dot"
+              data-prop44="home-hero_pc_sp_dots-slider_03"
+            >
+            </button>
           </div>
-        </div>
 
-        <!-- Dots -->
-        <div class="Hero__dots js-hero-dots">
-          <button class="Hero__dots-item is-active" aria-label="Hero Dot"></button>
-          <button class="Hero__dots-item" aria-label="Hero Dot"></button>
-          <button class="Hero__dots-item" aria-label="Hero Dot"></button>
-        </div>
+          <!-- Static Button -->
+          <a href="#menu" class="Hero__btn"
+            rel="nofollow noopener noreferrer"
+            aria-label="Menu"
+          >
+            OUR MENU
+          </a>
+        </div><!-- END Hero Content-->
 
-        <!-- Static Button -->
-        <a href="#menu" class="Hero__btn">OUR MENU</a>
-      </div>
-
-      <!-- Arrow -->
-      <button class="Hero__arrow Hero__arrow--prev js-hero-prev" aria-label="Previous slide">
-        <i class="fa-solid fa-circle-arrow-left"></i>
-      </button>
-      <button class="Hero__arrow Hero__arrow--next js-hero-next" aria-label="Next slide">
-        <i class="fa-solid fa-circle-arrow-right"></i>
-      </button>
+        <!-- Arrow -->
+        <button class="Hero__arrow Hero__arrow--prev js-hero-prev"
+          aria-label="Previous slide"
+          data-prop44="home-hero_pc_sp_previous-slider_01"
+        >
+          <i class="fa-solid fa-circle-arrow-left"></i>
+        </button>
+        <button class="Hero__arrow Hero__arrow--next js-hero-next"
+          aria-label="Next slide"
+          data-prop44="home-hero_pc_sp_next-slider_01"
+        >
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+      </div><!-- END Hero Content -->
 
     </section><!-- END Hero -->
 
     <section class="Story">
       <div class="Story__container">
         <div class="Story__media">
-          <img class="Story__media-image" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" alt="Foody Story" decoding="sync" fetchpriority="high" loading="eager" />
+          <img class="Story__media-image"
+            src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
+            alt="Foody Story"
+            decoding="sync"
+            fetchpriority="high"
+            loading="eager"
+          />
         </div>
 
-        <div class="Story__content">
+        <div class="Story__content js-story-swipe-slider">
           <div class="Story__content-title">Story Of Us</div>
           <div class="Story__dots">
-            <button class="Story__dots-item is-active" aria-label="Story Dot"></button>
-            <button class="Story__dots-item" aria-label="Story Dot"></button>
-            <button class="Story__dots-item" aria-label="Story Dot"></button>
+            <button class="Story__dots-item is-active" aria-label="Story Dot"
+              data-prop44="home-story_pc_sp_dot-slider_01"
+            >
+            </button>
+            <button class="Story__dots-item" aria-label="Story Dot"
+              data-prop44="home-story_pc_sp_dot-slider_02"
+            >
+            </button>
+            <button class="Story__dots-item" aria-label="Story Dot"
+              data-prop44="home-story_pc_sp_dot-slider_03"
+            >
+            </button>
           </div>
           <div class="Story__content-sliders">
             <p class="Story__desc is-active">
@@ -284,7 +375,13 @@
               Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
             </p>
           </div><!-- END Story Slider -->
-          <a href="#menu" class="Story__btn">More</a>
+          <a href="#more" class="Story__btn"
+          data-prop44="home-story_pc_sp_show-more_01"
+            rel="nofollow noopener noreferrer"
+            aria-label="More"
+          >
+            More
+          </a>
         </div><!-- END Story Content -->
         <div class="Story__preview-box" id="storyPreview">
           <div class="Story__preview-content"></div>
