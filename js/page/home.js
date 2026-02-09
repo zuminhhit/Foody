@@ -19,9 +19,9 @@ export function initFooterYear() {
 }
 
 export function surfSlider() {
-  const bgSlides = document.querySelectorAll(".Hero__bg-slide");
-  const contentSlides = document.querySelectorAll(".Hero__content-slide");
-  const dots = document.querySelectorAll(".Hero__dots-item");
+  const bgSlides = document.querySelectorAll(".Hero-bg-slide");
+  const contentSlides = document.querySelectorAll(".Hero-content-slide");
+  const dots = document.querySelectorAll(".Hero-dots__item");
   const prev = document.querySelector(".js-hero-prev");
   const next = document.querySelector(".js-hero-next");
   const hero = document.querySelector(".js-hero-slider");
@@ -99,8 +99,8 @@ export function surfSlider() {
 }
 
 export function surfStorySlider() {
-  const descs = document.querySelectorAll(".Story__desc");
-  const dots = document.querySelectorAll(".Story__dots-item");
+  const descs = document.querySelectorAll(".Story-content__desc");
+  const dots = document.querySelectorAll(".Story-dots__item");
   const storyContent = document.querySelector(".js-story-swipe-slider");
   const total = descs.length;
 
@@ -179,9 +179,9 @@ export function surfStorySlider() {
 }
 
 export function enableStoryPreviewBox() {
-  const descs = document.querySelectorAll(".Story__desc");
+  const descs = document.querySelectorAll(".Story-content__desc");
   const previewBox = document.getElementById("storyPreview");
-  const previewContent = previewBox?.querySelector(".Story__preview-content");
+  const previewContent = previewBox?.querySelector(".Story-preview__content");
 
   if (!previewBox || !previewContent) return;
 

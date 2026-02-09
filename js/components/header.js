@@ -6,15 +6,20 @@ export function toggleMenuHeader() {
   if (!header || !toggleBtn) return;
 
   toggleBtn.addEventListener("click", () => {
-    header.classList.toggle("Header--menu-open");
+    const isOpen = header.classList.toggle("Header--menu-open");
+    if (!isOpen) {
+      header.querySelectorAll(".Header-sp-item--sub-open").forEach((item) => {
+        item.classList.remove("Header-sp-item--sub-open");
+      });
+    }
   });
 }
 
 export function toggleHeaderSubMenu() {
   document.querySelectorAll(".js-sub-toggle").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const item = btn.closest(".Header__sp-item");
-      item?.classList.toggle("Header__sp-item--sub-open");
+      const item = btn.closest(".Header-sp-item");
+      item?.classList.toggle("Header-sp-item--sub-open");
     });
   });
 }

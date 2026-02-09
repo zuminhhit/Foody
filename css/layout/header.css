@@ -10,7 +10,7 @@
   z-index: 100; /* Higher than content */
 }
 
-.Header__container {
+.Header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,13 +18,11 @@
   margin: 0 auto;
 }
 
-.Header__logo--size {
+.Header-logo--size {
   display: block;
-  width: auto;
-  height: var(--header-height);
 }
 
-.Header__toggle {
+.Header-toggle {
   background: none;
   border: none;
   font-size: 24px;
@@ -45,7 +43,7 @@
   display: inline-block;
 }
 
-.Header--menu-open .Header__sp-menu {
+.Header--menu-open .Header-sp-menu {
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
@@ -59,7 +57,7 @@
   cursor: pointer;
 }
 
-.Header__sp-menu {
+.Header-sp-menu {
   position: fixed;
   top: var(--header-height);
   left: 0;
@@ -75,7 +73,7 @@
   z-index: 99; /* Higher than content and lower than Header*/
 }
 
-.Header__sp-list {
+.Header-sp-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -83,17 +81,17 @@
   overflow-y: auto;
 }
 
-.Header__sp-item {
+.Header-sp-item {
   padding: 0.5rem 20px;
   border-bottom: 1px solid #000000;
 }
 
-.Header__sp-item:first-child {
+.Header-sp-item:first-child {
   padding: 0.5rem 20px;
   border-top: 1px solid #000000;
 }
 
-.Header__sp-sub {
+.Header-sp-sub {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -103,11 +101,11 @@
     opacity 0.2s ease;
 }
 
-.Header__sp-sub-item {
+.Header-sp-sub-item {
   padding-top: 10px;
 }
 
-.Header__sp-item-link--unset-btn {
+.Header-sp-item__link--unset-btn {
   all: unset;
   box-sizing: border-box;
   width: 100%;
@@ -116,18 +114,18 @@
   cursor: pointer;
 }
 
-.Header__sp-item-link--unset-btn:focus-visible {
+.Header-sp-item__link--unset-btn:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 4px;
 }
 
-.Header__sp-item--sub-open .Header__sp-sub {
+.Header-sp-item--sub-open .Header-sp-sub {
   max-height: 40vh;
   opacity: 1;
   overflow-y: auto;
 }
 
-.Header__sp-arrow {
+.Header-sp-arrow {
   margin-left: auto;
   display: inline-block;
   transition: transform 0.3s ease;
@@ -135,18 +133,18 @@
   font-size: 0.9rem;
 }
 
-.Header__sp-item--sub-open .Header__sp-arrow {
+.Header-sp-item--sub-open .Header-sp-arrow {
   transform: rotate(180deg);
 }
 
-.Header__sp-item-link {
+.Header-sp-item__link {
   color: #ffffff;
   font-size: 18px;
   letter-spacing: 1px;
   text-decoration: none;
 }
 
-.Header__sp-sub-link {
+.Header-sp-sub-link {
   color: #ffffff;
   font-size: 18px;
   letter-spacing: 1px;
@@ -170,7 +168,7 @@
     display: none;
   }
 
-  .Header__sp-menu {
+  .Header-sp-menu {
     display: none;
   }
 
@@ -178,7 +176,7 @@
     display: block;
   }
 
-  .Header__container {
+  .Header-container {
     justify-content: space-around;
   }
 
@@ -187,13 +185,13 @@
     align-items: end;
   }
 
-  .Header__social {
+  .Header-social {
     display: flex;
     gap: 16px;
     margin-left: 24px;
   }
 
-  .Header__social-link {
+  .Header-social__link {
     display: inline-block;
     color: #ffffff;
     font-size: 18px;
@@ -202,13 +200,13 @@
     text-decoration: none;
   }
 
-  .Header__social-link:hover {
+  .Header-social__link:hover {
     transform: scale(1.2);
     opacity: 0.8;
     text-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
   }
 
-  .Header__nav-list {
+  .Header-nav-list {
     list-style: none;
     display: flex;
     gap: 24px;
@@ -216,12 +214,12 @@
     padding: 0;
   }
 
-  .Header__nav-item {
+  .Header-nav-item {
     position: relative;
     padding-right: 16px;
   }
 
-  .Header__nav-item::after {
+  .Header-nav-item::after {
     content: "";
     position: absolute;
     right: 0;
@@ -231,7 +229,7 @@
     background-color: #fff;
   }
 
-  .Header__nav-link {
+  .Header-nav__link {
     display: inline-block;
     text-decoration: none;
     color: #ffffff;
@@ -241,12 +239,12 @@
     transition: opacity 0.2s ease;
   }
 
-  .Header__nav-link:hover {
+  .Header-nav__link:hover {
     opacity: 0.8;
     text-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
   }
 
-  .Header__menu-dropdown {
+  .Header-menu-dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -261,7 +259,7 @@
     transition: 0.2s ease;
   }
 
-  .Header__nav-item:hover .Header__menu-dropdown {
+  .Header-nav-item:hover .Header-menu-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(1rem);
@@ -269,7 +267,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   }
 
-  .Header__menu-item-link {
+  .Header-menu-item__link {
     display: block;
     padding: 8px 16px;
     text-decoration: none;
@@ -277,7 +275,7 @@
     white-space: nowrap;
   }
 
-  .Header__menu-item-link:hover {
+  .Header-menu-item__link:hover {
     background: #f2f2f2;
   }
 }

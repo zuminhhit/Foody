@@ -1,25 +1,24 @@
 <div class="Home">
-  <!-- Header -->
   <header class="Header">
     <div class="Responsive">
-      <div class="Header__container">
-        <div class="Header__logo">
+      <div class="Header-container">
+        <div class="Header-logo">
           <img src="assets/images/logo/logo-foody.png"
             alt="Foody"
-            class="Header__logo--size"
+            class="Header-logo--size"
             decoding="sync"
             fetchpriority="high"
             loading="eager"
+            width="80"
+            height="80"
           />
-        </div>
-
+        </div><!-- END Header Logo-->
         <div class="Header-right">
-          <!-- Nav (PC) -->
-          <nav class="pc Header__nav">
-            <ul class="Header__nav-list">
-              <li class="Header__nav-item">
-                <a href="#" class="Header__nav-link"
-                  data-prop44="home-header_pc_welcome_01"
+          <nav class="pc Header-nav">
+            <ul class="Header-nav-list">
+              <li class="Header-nav-item">
+                <a href="https://www.google.com/" class="Header-nav__link"
+                  data-prop44="home-header-pc_google_01"
                   target="_blank"
                   rel="external nofollow noopener noreferrer"
                   aria-label="Welcome"
@@ -27,19 +26,17 @@
                   Welcome
                 </a>
               </li>
-              <li class="Header__nav-item">
-                <a href="#" class="Header__nav-link"
-                  data-prop44="home-header_pc_menu_01"
-                  target="_blank"
-                  rel="external nofollow noopener noreferrer"
+              <li class="Header-nav-item">
+                <a href="#" class="Header-nav__link"
+                  data-prop44="home-header-pc_menu-dropdown_01"
                   aria-label="Menu"
                 >
                   Menu
                 </a>
-                <ul class="Header__menu-dropdown">
-                  <li class="Header__menu-item">
-                    <a href="#" class="Header__menu-item-link"
-                      data-prop44="home-header_pc_menu-breakfast_01"
+                <ul class="Header-menu-dropdown">
+                  <li class="Header-menu-item">
+                    <a href="https://dictionary.cambridge.org/vi/dictionary/english/breakfast" class="Header-menu-item__link"
+                      data-prop44="home-header-pc_menu-breakfast_01"
                       target="_blank"
                       rel="external nofollow noopener noreferrer"
                       aria-label="Breakfast"
@@ -47,9 +44,9 @@
                       Breakfast
                     </a>
                   </li>
-                  <li class="Header__menu-item">
-                    <a href="#" class="Header__menu-item-link"
-                      data-prop44="home-header_pc_menu-lunch_01"
+                  <li class="Header-menu-item">
+                    <a href="https://dictionary.cambridge.org/vi/dictionary/english/lunch" class="Header-menu-item__link"
+                      data-prop44="home-header-pc_menu-lunch_01"
                       target="_blank"
                       rel="external nofollow noopener noreferrer"
                       aria-label="Lunch"
@@ -57,9 +54,9 @@
                       Lunch
                     </a>
                   </li>
-                  <li class="Header__menu-item">
-                    <a class="Header__menu-item-link" href="#"
-                      data-prop44="home-header_pc_menu-dinner_01"
+                  <li class="Header-menu-item">
+                    <a class="Header-menu-item__link" href="https://dictionary.cambridge.org/vi/dictionary/english/dinner"
+                      data-prop44="home-header-pc_menu-dinner_01"
                       target="_blank"
                       rel="external nofollow noopener noreferrer"
                       aria-label="Dinner"
@@ -69,9 +66,9 @@
                   </li>
                 </ul>
               </li>
-              <li class="Header__nav-item">
-                <a href="#" class="Header__nav-link"
-                  data-prop44="home-header_pc_video-tour_01"
+              <li class="Header-nav-item">
+                <a href="https://www.youtube.com/watch?v=Ud2TMnznnwI" class="Header-nav__link"
+                  data-prop44="home-header-pc_video-tour_01"
                   target="_blank"
                   rel="external nofollow noopener noreferrer"
                   aria-label="Video Tour"
@@ -79,11 +76,11 @@
                   Video Tour
                 </a>
               </li>
-              <li class="Header__nav-item">
-                <a href="#" class="Header__nav-link"
-                  data-prop44="home-header_pc_contact_01"
+              <li class="Header-nav-item">
+                <a href="https://faq.lifenet-seimei.co.jp" class="Header-nav__link"
+                  data-prop44="home-header-pc_contact_01"
                   target="_blank"
-                  rel="external nofollow noopener noreferrer"
+                  rel="help"
                   aria-label="Contact"
                 >
                   Contact
@@ -92,9 +89,8 @@
             </ul> <!-- END UL -->
           </nav><!-- END Nav PC -->
 
-          <!-- Social (PC only) -->
-          <div class="pc Header__social">
-            <a href="https://www.facebook.com/" class="Header__social-link"
+          <div class="pc Header-social">
+            <a href="https://www.facebook.com/" class="Header-social__link"
               aria-label="Facebook"
               data-prop44="home-header_pc_facebook_01"
               target="_blank"
@@ -102,7 +98,7 @@
             >
               <i class="fa-brands fa-square-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/" class="Header__social-link"
+            <a href="https://www.instagram.com/" class="Header-social__link"
               aria-label="Instagram"
               data-prop44="home-header_pc_instagram_01"
               target="_blank"
@@ -110,7 +106,7 @@
             >
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://x.com/" class="Header__social-link"
+            <a href="https://x.com/" class="Header-social__link"
               aria-label="X"
               data-prop44="home-header_pc_twitter_01"
               target="_blank"
@@ -119,25 +115,20 @@
               <i class="fa-brands fa-twitter"></i>
             </a>
           </div>
-        </div> <!-- END Header Right-->
-
-        <!-- Hamburger (SP) -->
-        <button class="sp Header__toggle js-header-toggle"
+        </div><!-- END Header Right-->
+        <button class="sp Header-toggle js-header-toggle"
           data-prop44="home-header_pc_btn_toggle_menu_01"
           aria-label="Open Menu"
-          target="_blank"
-          rel="external nofollow noopener noreferrer"
         >
-          <i class="Header__icon Header__icon--open fa-solid fa-bars"></i>
-          <i class="Header__icon Header__icon--close fa-solid fa-xmark"></i>
+          <i class="Header__icon--open fa-solid fa-bars"></i>
+          <i class="Header__icon--close fa-solid fa-xmark"></i>
         </button>
-      </div>
-    </div><!-- END Container -->
-
-    <nav class="sp Header__sp-menu">
-      <ul class="Header__sp-list">
-        <li class="Header__sp-item">
-          <a class="Header__sp-item-link"
+      </div><!-- END Container -->
+    </div><!-- END Responsive -->
+    <nav class="sp Header-sp-menu">
+      <ul class="Header-sp-list">
+        <li class="Header-sp-item">
+          <a class="Header-sp-item__link"
             href="#"
             data-prop44="home-header_pc_welcome_01"
             target="_blank"
@@ -147,36 +138,37 @@
             Welcome
           </a>
         </li>
-        <li class="Header__sp-item Header__sp-item--has-sub">
-          <button class="Header__sp-item-link Header__sp-item-link--unset-btn js-sub-toggle"
+        <li class="Header-sp-item Header-sp-item--has-sub">
+          <button class="Header-sp-item__link Header-sp-item__link--unset-btn js-sub-toggle"
             data-prop44="home-header_pc_menu_01"
             aria-label="Menu"
           >
             Menu
-            <i class="fa-solid fa-caret-down Header__sp-arrow"></i>
+            <i class="fa-solid fa-caret-down Header-sp-arrow"></i>
           </button>
-          <ul class="Header__sp-sub">
-            <li class="Header__sp-sub-item">
-              <a class="Header__sp-sub-link" href="#"
-              data-prop44="home-header_pc_menu-breakfast_01"
-              aria-label="Breakfast"
-              target="_blank"
-              rel="external nofollow noopener noreferrer"
-            >
-              Breakfast
-            </a>
+          <ul class="Header-sp-sub">
+            <li class="Header-sp-sub-item">
+              <a class="Header-menu-item__link" href="https://dictionary.cambridge.org/vi/dictionary/english/breakfast"
+                data-prop44="home-header-sp_menu-breakfast_01"
+                aria-label="Breakfast"
+                target="_blank"
+                rel="external nofollow noopener noreferrer"
+              >
+                Breakfast
+              </a>
             </li>
-            <li class="Header__sp-sub-item">
-              <a class="Header__sp-sub-link" href="#"
-                data-prop44="home-header_pc_menu-lunch_01"
+            <li class="Header-sp-sub-item">
+              <a class="Header-menu-item__link" href="https://dictionary.cambridge.org/vi/dictionary/english/lunch"
+                data-prop44="home-header-sp_menu-lunch_01"
+                aria-label="Lunch"
                 target="_blank"
                 rel="external nofollow noopener noreferrer"
               >
                 Lunch
               </a>
             </li>
-            <li class="Header__sp-sub-item">
-              <a class="Header__sp-sub-link" href="#"
+            <li class="Header-sp-sub-item">
+              <a class="Header-menu-item__link" href="https://dictionary.cambridge.org/vi/dictionary/english/dinner"
                 data-prop44="home-header_pc_menu-dinner_01"
                 target="_blank"
                 rel="external nofollow noopener noreferrer"
@@ -187,8 +179,8 @@
             </li>
           </ul>
         </li>
-        <li class="Header__sp-item">
-          <a class="Header__sp-item-link" href="#"
+        <li class="Header-sp-item">
+          <a class="Header-sp-item__link" href="https://www.youtube.com/watch?v=Ud2TMnznnwI"
             data-prop44="home-header_pc_video-tour_01"
             target="_blank"
             rel="external nofollow noopener noreferrer"
@@ -197,11 +189,11 @@
             Video Tour
           </a>
         </li>
-        <li class="Header__sp-item">
-          <a class="Header__sp-item-link" href="#"
+        <li class="Header-sp-item">
+          <a class="Header-sp-item__link" href="https://faq.lifenet-seimei.co.jp"
             data-prop44="home-header_pc_contact_01"
             target="_blank"
-            rel="external nofollow noopener noreferrer"
+            rel="help"
             aria-label="Contact"
           >
             Contact
@@ -210,153 +202,150 @@
       </ul>
     </nav><!-- END Nav sp-->
   </header><!-- END Header -->
-
   <main class="Main">
-
     <section class="Hero">
-      <div class="Hero__container js-hero-slider">
+      <div class="Hero-container js-hero-slider">
         <!-- Background slider -->
-        <div class="Hero__bg js-hero-bg">
-          <div class="Hero__bg-track">
-            <div class="Hero__bg-slide is-active">
-              <img class="Hero__bg-slide-img" src="https://www.kellywearstler.com/on/demandware.static/-/Sites-KellyWearstler-Library/default/v1770073356668/images/02_Interiors/detail_pages/commercial/bg_restaurant/screen4.jpg"
+        <div class="Hero-bg js-hero-bg">
+          <div class="Hero-bg-track">
+            <div class="Hero-bg-slide is-active">
+              <img class="Hero-bg__img" src="https://www.kellywearstler.com/on/demandware.static/-/Sites-KellyWearstler-Library/default/v1770073356668/images/02_Interiors/detail_pages/commercial/bg_restaurant/screen4.jpg"
                 alt="Slider 1"
                 decoding="sync"
                 fetchpriority="high"
                 loading="eager"
+                width="2560"
+                height="1440"
               />
             </div>
-            <div class="Hero__bg-slide">
-              <img class="Hero__bg-slide-img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
+            <div class="Hero-bg-slide">
+              <img class="Hero-bg__img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
                 alt="Slider 1"
                 decoding="async"
-                fetchpriority="high"
+                fetchpriority="low"
                 loading="lazy"
+                width="2560"
+                height="1440"
               />
             </div>
-            <div class="Hero__bg-slide">
-              <img class="Hero__bg-slide-img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
+            <div class="Hero-bg-slide">
+              <img class="Hero-bg__img" src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
                 alt="Slider 1"
                 decoding="async"
-                fetchpriority="high"
+                fetchpriority="low"
                 loading="lazy"
+                width="2560"
+                height="1440"
               />
             </div>
           </div><!-- END BG Track-->
         </div><!-- END Hero BG-->
-
         <!-- Content slider -->
-        <div class="Hero__content">
-          <div class="Hero__content-track js-hero-content">
-            <div class="Hero__content-slide is-active">
-              <div class="Hero__content-inner">
-                <h1 class="Hero__title">It's a Food Adventure.</h1>
+        <div class="Hero-content">
+          <div class="Hero-content-track">
+            <div class="Hero-content-slide is-active">
+              <div class="Hero-content-inner">
+                <p class="Hero__title">It's a Food Adventure.</p>
                 <span class="Hero__divider"></span>
                 <p class="Hero__desc">
-                  You'll Never Put A Better<br />
+                  You'll Never Put A Better<br>
                   Bit Of Food On Your Knife.
                 </p>
               </div>
             </div>
-
-            <div class="Hero__content-slide">
-              <div class="Hero__content-inner">
-                <h1 class="Hero__title">Discover Great Taste.</h1>
+            <div class="Hero-content-slide">
+              <div class="Hero-content-inner">
+                <p class="Hero__title">Discover Great Taste.</p>
                 <span class="Hero__divider"></span>
                 <p class="Hero__desc">
-                  Fresh Ingredients<br />
+                  Fresh Ingredients<br>
                   Crafted With Passion.
                 </p>
               </div>
             </div>
-
-            <div class="Hero__content-slide">
-              <div class="Hero__content-inner">
-                <h1 class="Hero__title">Enjoy The Moment.</h1>
+            <div class="Hero-content-slide">
+              <div class="Hero-content-inner">
+                <p class="Hero__title">Enjoy The Moment.</p>
                 <span class="Hero__divider"></span>
                 <p class="Hero__desc">
-                  Food That Brings<br />
+                  Food That Brings<br>
                   People Together.
                 </p>
               </div>
             </div>
           </div><!-- END Hero Content Track -->
-
           <!-- Dots -->
-          <div class="Hero__dots js-hero-dots">
-            <button class="Hero__dots-item is-active"
+          <div class="Hero-dots js-hero-dots">
+            <button class="Hero-dots__item is-active"
               aria-label="Hero Dot"
               data-prop44="home-hero_pc_sp_dots-slider_01"
             >
             </button>
-            <button class="Hero__dots-item"
+            <button class="Hero-dots__item"
               aria-label="Hero Dot"
               data-prop44="home-hero_pc_sp_dots-slider_02"
             >
             </button>
-            <button class="Hero__dots-item"
+            <button class="Hero-dots__item"
               aria-label="Hero Dot"
               data-prop44="home-hero_pc_sp_dots-slider_03"
             >
             </button>
           </div>
-
           <!-- Static Button -->
           <a href="#menu" class="Hero__btn"
-            rel="nofollow noopener noreferrer"
+            data-prop44="home-hero-pc-sp_#menu_01"
             aria-label="Menu"
           >
             OUR MENU
           </a>
         </div><!-- END Hero Content-->
-
         <!-- Arrow -->
-        <button class="Hero__arrow Hero__arrow--prev js-hero-prev"
+        <button class="Hero-arrow Hero-arrow--prev js-hero-prev"
           aria-label="Previous slide"
           data-prop44="home-hero_pc_sp_previous-slider_01"
         >
           <i class="fa-solid fa-circle-arrow-left"></i>
         </button>
-        <button class="Hero__arrow Hero__arrow--next js-hero-next"
+        <button class="Hero-arrow Hero-arrow--next js-hero-next"
           aria-label="Next slide"
           data-prop44="home-hero_pc_sp_next-slider_01"
         >
           <i class="fa-solid fa-circle-arrow-right"></i>
         </button>
       </div><!-- END Hero Content -->
-
     </section><!-- END Hero -->
-
     <section class="Story">
-      <div class="Story__container">
-        <div class="Story__media">
-          <img class="Story__media-image"
+      <div class="Story-container">
+        <div class="Story-media">
+          <img class="Story-media__img"
             src="https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg" 
             alt="Foody Story"
-            decoding="sync"
-            fetchpriority="high"
-            loading="eager"
+            decoding="async"
+            fetchpriority="low"
+            loading="lazy"
+            width="625"
+            height="350"
           />
         </div>
-
-        <div class="Story__content js-story-swipe-slider">
-          <div class="Story__content-title">Story Of Us</div>
-          <div class="Story__dots">
-            <button class="Story__dots-item is-active" aria-label="Story Dot"
+        <div class="Story-content js-story-swipe-slider">
+          <div class="Story-content__title">Story Of Us</div>
+          <div class="Story-dots">
+            <button class="Story-dots__item is-active" aria-label="Story Dot"
               data-prop44="home-story_pc_sp_dot-slider_01"
             >
             </button>
-            <button class="Story__dots-item" aria-label="Story Dot"
+            <button class="Story-dots__item" aria-label="Story Dot"
               data-prop44="home-story_pc_sp_dot-slider_02"
             >
             </button>
-            <button class="Story__dots-item" aria-label="Story Dot"
+            <button class="Story-dots__item" aria-label="Story Dot"
               data-prop44="home-story_pc_sp_dot-slider_03"
             >
             </button>
           </div>
-          <div class="Story__content-sliders">
-            <p class="Story__desc is-active">
+          <div class="Story-content-sliders">
+            <p class="Story-content__desc is-active">
               Lorem1 ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
@@ -368,30 +357,28 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
             </p>
-            <p class="Story__desc">
+            <p class="Story-content__desc">
               Lorem2 ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
             </p>
-            <p class="Story__desc">
+            <p class="Story-content__desc">
               Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
             </p>
           </div><!-- END Story Slider -->
           <a href="#more" class="Story__btn"
-          data-prop44="home-story_pc_sp_show-more_01"
-            rel="nofollow noopener noreferrer"
+            data-prop44="home-story-pc-sp_#more_01"
             aria-label="More"
           >
             More
           </a>
         </div><!-- END Story Content -->
-        <div class="Story__preview-box" id="storyPreview">
-          <div class="Story__preview-content"></div>
+        <div class="Story-preview-box" id="storyPreview">
+          <div class="Story-preview__content"></div>
         </div>
       </div><!-- END Story Container -->
     </section><!-- END Story -->
-
     <section class="Quote">
-      <div class="Quote__container">
-        <div class="Quote__content">
+      <div class="Quote-container">
+        <div class="Quote-content">
           <q class="Quote__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.
           </q>
@@ -399,37 +386,34 @@
         </div>
       </div>
     </section>
-
-
   </main><!-- END Main -->
-
   <footer class="Footer">
-      <div class="Footer__main">
-        <div class="Footer__container">
-          <div class="Footer__main-inner">
-            <section class="Footer__block">
+      <div class="Footer-main">
+        <div class="Footer-container">
+          <div class="Footer-main-inner">
+            <section class="Footer-block">
               <div class="Footer__title">Locations</div>
-              <div class="Footer__desc-content">
+              <div class="Footer-desc-content">
                 <p class="Footer__text">
-                  678 Some Awesome <br/>
+                  678 Some Awesome <br>
                   Brooklyn, NY - 112233
                 </p>
                 <p class="Footer__text">
-                  678 Some Awesome <br/>
+                  678 Some Awesome <br>
                   Brooklyn, NY - 112233
                 </p>
               </div>
             </section>
 
-            <section class="Footer__block">
+            <section class="Footer-block">
               <div class="Footer__title">Hours</div>
-              <div class="Footer__desc-content">
+              <div class="Footer-desc-content">
                 <p class="Footer__text">
-                  Monday - Thursday <br/>
+                  Monday - Thursday <br>
                   08:00am - 11:00pm
                 </p>
                 <p class="Footer__text">
-                  Monday - Thursday <br/>
+                  Monday - Thursday <br>
                   08:00am - 11:00pm
                 </p>
               </div>
@@ -438,31 +422,31 @@
         </div><!-- END Footer container -->
       </div><!-- END Footer main -->
 
-      <div class="Footer__bottom">
-        <div class="Footer__container">
-          <div class="Footer__bottom-inner">
-            <p class="Footer__copyright">
+      <div class="Footer-bottom">
+        <div class="Footer-container">
+          <div class="Footer-bottom-inner">
+            <p class="Footer-copyright">
               Copyright <span id="js-get-year"></span> &copy; Foody - All Rights Reserved
             </p>
-            <div class="Footer__social">
-              <a href="https://www.facebook.com/" class="Footer__social-link"
-                data-prop44="home-footer_pc_sp_facebook_01"
+            <div class="Footer-social">
+              <a href="https://www.facebook.com/" class="Footer-social__link"
+                data-prop44="home-footer-pc-sp_facebook_01"
                 target="_blank"
                 rel="external nofollow noopener noreferrer"
                 aria-label="Facebook"
               >
                 <i class="fa-brands fa-square-facebook"></i>
               </a>
-              <a href="https://www.instagram.com/" class="Footer__social-link"
-                data-prop44="home-footer_pc_sp_instagram_01"
+              <a href="https://www.instagram.com/" class="Footer-social__link"
+                data-prop44="home-footer-pc-sp_instagram_01"
                 target="_blank"
                 rel="external nofollow noopener noreferrer"
                 aria-label="Instagram"
               >
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <a href="https://x.com/" class="Footer__social-link"
-                data-prop44="home-footer_pc_sp_twitter_01"
+              <a href="https://x.com/" class="Footer-social__link"
+                data-prop44="home-footer-pc-sp_twitter_01"
                 target="_blank"
                 rel="external nofollow noopener noreferrer"
                 aria-label="X"

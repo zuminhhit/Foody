@@ -4,7 +4,7 @@
   margin-top: -3rem;
 }
 
-.Quote__container {
+.Quote-container {
   width: 100%;
   min-height: 20vh;
   padding: 2rem 1rem;
@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.Quote__content {
+.Quote-content {
   max-width: 800px;
   text-align: center;
   display: flex;
