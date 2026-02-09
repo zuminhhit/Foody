@@ -1,0 +1,97 @@
+/* =========================
+   MENU – PC FIRST
+========================= */
+
+.Menu {
+  padding: 6rem 0;
+  background: #f5f5f5;
+}
+
+.Menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== Title ===== */
+.Menu-title__header {
+  font-family: serif;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+/* ===== GRID ===== */
+.Menu-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* PC: 4 cột */
+  margin: 0 auto;
+}
+
+/* ===== ITEM ===== */
+.Menu-list-item {
+  aspect-ratio: 1 / 1;
+  background: #ffffff; /* ô trắng mặc định */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+/* Ô CONTENT (JS gắn class) */
+.Menu-list-item.is-content {
+  background: #9cb0a6;
+  color: #ffffff;
+}
+
+/* ===== TEXT ===== */
+.Menu-list-item__name {
+  font-family: serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.Menu-list-item__desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.Menu-list-item__price {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ===== SHOW MORE ===== */
+.Menu-show-more {
+  margin-top: 3rem;
+}
+
+.Menu-show-more__title {
+  font-family: serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.Menu-show-more--toggle {
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}

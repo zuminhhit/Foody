@@ -2,13 +2,14 @@
 
 /* ===== Base ===== */
 @import url('./base/reset.css');
-@import url('./base/variables.css');
+@import url('./base/utilities.css');
 
 /* ===== Layout ===== */
 @import url('./layout/header.css');
 @import url('./layout/hero.css');
 @import url('./layout/story.css');
 @import url('./layout/quote.css');
+@import url('./layout/menu.css');
 @import url('./layout/footer.css');
 
 /* ===== Pages ===== */

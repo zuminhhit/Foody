@@ -150,7 +150,7 @@
 .Hero-arrow--prev { left: 0; }
 .Hero-arrow--next { right: 0; }
 
-@media (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .Hero {
     height: 50vh;
     min-height: 520px;
