@@ -109,7 +109,7 @@ export function surfStorySlider() {
   let current = 0;
   let timer = null;
   let isPreviewOpen = false;
-  const INTERVAL = 1000;
+  const INTERVAL = 3000;
 
   function goTo(i) {
     const nextIndex = (i + total) % total;
