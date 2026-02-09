@@ -9,6 +9,7 @@ export function initHome() {
   toggleMenuHeader();
   toggleHeaderSubMenu();
   toggleLockScroll();
+  blockDefaultClickLink(".js-blockSubmit");
 }
 
 export function initFooterYear() {
@@ -16,6 +17,16 @@ export function initFooterYear() {
   if (!_yearEl) return;
 
   _yearEl.textContent = new Date().getFullYear();
+}
+
+function blockDefaultClickLink(className) {
+  const element = document.querySelector(className);
+
+  if (element) {
+    element.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  }
 }
 
 export function surfSlider() {
