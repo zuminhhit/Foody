@@ -23,7 +23,7 @@
     max-width: 90%;
     margin: -1rem auto 0 auto;
     transform: translateY(calc(-1 * var(--story-overlap)));
-    z-index: 5; /* Higher than Story */
+    z-index: 2; /* Story Container: Higher than Background Slider in Hero & Higher than Quote */
 }
 
 .Story-media {
@@ -57,7 +57,6 @@
     border-radius: 0 0 8px 8px;
     border: 2px solid #e5e5e5;
     border-top: none;
-    z-index: 5; /* Higher than quote */
 }
 
 .Story-content__title {
@@ -149,7 +148,7 @@
   visibility: hidden;
   pointer-events: none;
   transition: opacity .2s ease, transform .2s ease;
-  z-index: 6; /* higher than story content */
+  z-index: 3; /* Story preview: Higher than story content */
   margin: 0;
 }
 

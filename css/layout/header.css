@@ -7,7 +7,7 @@
   top: 0;
   min-height: var(--header-height);
   background: #5e5e5e;
-  z-index: 100; /* Higher than content */
+  z-index: 6; /* Header: Taller than content */
 }
 
 .Header-container {
@@ -70,7 +70,7 @@
   transition:
     transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.25s ease;
-  z-index: 99; /* Higher than content and lower than Header*/
+  z-index: 5; /* Menu item mobile: Higher than content and lower than Header */
 }
 
 .Header-sp-list {

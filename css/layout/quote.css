@@ -1,6 +1,6 @@
 .Quote {
   position: relative;
-  z-index: 1; /* higher than bg slider */
+  z-index: 1; /* Quote: Higher than Background Slider in Hero */
   margin-top: -3rem;
 }
 
