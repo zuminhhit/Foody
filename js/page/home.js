@@ -17,9 +17,10 @@ export function initHome() {
   toggleVideoModal();
   toggleLockScrollPlayVideo();
   blockDefaultClickLink(".js-blockSubmit");
+  enableMenuPreview();
 }
 
-export function initFooterYear() {
+function initFooterYear() {
   const _yearEl = document.getElementById("js-get-year");
   if (!_yearEl) return;
 
@@ -36,11 +37,11 @@ function blockDefaultClickLink(className) {
   }
 }
 
-export function toggleLockScrollPlayVideo() {
+function toggleLockScrollPlayVideo() {
   const modal = document.querySelector(".js-toggle-video-modal");
   const playVideo = document.querySelector(".js-play-video");
   const closeBtns = modal.querySelectorAll(
-    ".js-close-video-modal, .js-close-outside-video-modal"
+    ".js-close-video-modal, .js-close-outside-video-modal",
   );
 
   playVideo.addEventListener("click", () => {
@@ -54,7 +55,7 @@ export function toggleLockScrollPlayVideo() {
   });
 }
 
-export function surfSlider() {
+function surfSlider() {
   const bgSlides = document.querySelectorAll(".Hero-bg-slide");
   const contentSlides = document.querySelectorAll(".Hero-content-slide");
   const dots = document.querySelectorAll(".Hero-dots__item");
@@ -134,7 +135,7 @@ export function surfSlider() {
   startAuto();
 }
 
-export function surfStorySlider() {
+function surfStorySlider() {
   const descs = document.querySelectorAll(".Story-content__desc");
   const dots = document.querySelectorAll(".Story-dots__item");
   const storyContent = document.querySelector(".js-story-swipe-slider");
@@ -214,7 +215,7 @@ export function surfStorySlider() {
   startAuto();
 }
 
-export function enableStoryPreviewBox() {
+function enableStoryPreviewBox() {
   const descs = document.querySelectorAll(".Story-content__desc");
   const previewBox = document.getElementById("storyPreview");
   const previewContent = previewBox?.querySelector(".Story-preview__content");
@@ -274,7 +275,7 @@ export function enableStoryPreviewBox() {
   document.addEventListener("click", hidePreview);
 }
 
-export function toggleVideoModal() {
+function toggleVideoModal() {
   const modal = document.querySelector(".js-toggle-video-modal");
   const videoPlay = document.querySelector(".js-play-video");
   const backdrop = modal.querySelector(".js-close-outside-video-modal");
@@ -302,4 +303,113 @@ export function toggleVideoModal() {
       closeModal();
     }
   });
+}
+
+function enableMenuPreview() {
+  const items = document.querySelectorAll(".Menu-list-item-content");
+  const previewBox = document.getElementById("menuPreview");
+  const previewContent = previewBox?.querySelector(".Menu-preview__content");
+
+  if (!items.length || !previewBox || !previewContent) return;
+
+  const isTouch = window.matchMedia("(pointer: coarse)").matches;
+  const GAP = 12;
+  const HIDE_DELAY = 80;
+
+  let activeItem = null;
+  let hideTimer = null;
+  let hoveringPreview = false;
+
+  previewBox.style.maxHeight = "260px";
+  previewBox.style.overflowY = "auto";
+
+  function render(item) {
+    const name = item.querySelector(".Menu-list-item__name")?.innerText ?? "";
+    const desc = item.querySelector(".Menu-list-item__desc")?.innerText ?? "";
+    const price = item.querySelector(".Menu-list-item__price")?.innerText ?? "";
+
+    previewContent.innerHTML = `
+      <p class="name">${name}</p>
+      <p class="desc">${desc}</p>
+      <p class="price">${price}</p>
+    `;
+  }
+
+  function position(item) {
+    const rect = item.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const pw = previewBox.offsetWidth;
+    const ph = previewBox.offsetHeight;
+
+    let left = rect.right + GAP;
+    let top = rect.top;
+
+    if (left + pw > vw) {
+      left = rect.left - pw - GAP;
+    }
+    left = Math.max(GAP, left);
+
+    if (top + ph > vh) {
+      top = vh - ph - GAP;
+    }
+    top = Math.max(GAP, top);
+
+    previewBox.style.left = `${left}px`;
+    previewBox.style.top = `${top}px`;
+  }
+
+  function show(item) {
+    clearTimeout(hideTimer);
+    activeItem = item;
+    render(item);
+    previewBox.classList.add("is-show");
+    position(item);
+  }
+
+  function scheduleHide() {
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      if (!hoveringPreview) {
+        previewBox.classList.remove("is-show");
+        activeItem = null;
+      }
+    }, HIDE_DELAY);
+  }
+
+  if (!isTouch) {
+    items.forEach((item) => {
+      item.addEventListener("mouseenter", () => show(item));
+      item.addEventListener("mouseleave", scheduleHide);
+    });
+
+    previewBox.addEventListener("mouseenter", () => {
+      hoveringPreview = true;
+      clearTimeout(hideTimer);
+    });
+
+    previewBox.addEventListener("mouseleave", () => {
+      hoveringPreview = false;
+      scheduleHide();
+    });
+  } else {
+
+    items.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        if (activeItem === item) {
+          previewBox.classList.remove("is-show");
+          activeItem = null;
+        } else {
+          show(item);
+        }
+      });
+    });
+
+    document.addEventListener("click", () => {
+      previewBox.classList.remove("is-show");
+      activeItem = null;
+    });
+  }
 }
