@@ -320,8 +320,11 @@ function enableMenuPreview() {
   let hideTimer = null;
   let hoveringPreview = false;
 
+  let touchStartY = 0;
+
   previewBox.style.maxHeight = "260px";
   previewBox.style.overflowY = "auto";
+  previewBox.style.pointerEvents = "none";
 
   function render(item) {
     const name = item.querySelector(".Menu-list-item__name")?.innerText ?? "";
@@ -336,6 +339,9 @@ function enableMenuPreview() {
   }
 
   function position(item) {
+    previewBox.classList.add("is-show");
+    previewBox.style.pointerEvents = "auto";
+
     const rect = item.getBoundingClientRect();
     const vw = window.innerWidth;
     const vh = window.innerHeight;
@@ -363,24 +369,24 @@ function enableMenuPreview() {
     clearTimeout(hideTimer);
     activeItem = item;
     render(item);
-    previewBox.classList.add("is-show");
     position(item);
   }
 
-  function scheduleHide() {
-    clearTimeout(hideTimer);
-    hideTimer = setTimeout(() => {
-      if (!hoveringPreview) {
-        previewBox.classList.remove("is-show");
-        activeItem = null;
-      }
-    }, HIDE_DELAY);
+  function hide() {
+    previewBox.classList.remove("is-show");
+    previewBox.style.pointerEvents = "none";
+    activeItem = null;
   }
 
   if (!isTouch) {
     items.forEach((item) => {
       item.addEventListener("mouseenter", () => show(item));
-      item.addEventListener("mouseleave", scheduleHide);
+      item.addEventListener("mouseleave", () => {
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => {
+          if (!hoveringPreview) hide();
+        }, HIDE_DELAY);
+      });
     });
 
     previewBox.addEventListener("mouseenter", () => {
@@ -390,26 +396,40 @@ function enableMenuPreview() {
 
     previewBox.addEventListener("mouseleave", () => {
       hoveringPreview = false;
-      scheduleHide();
+      hide();
     });
   } else {
-
     items.forEach((item) => {
-      item.addEventListener("click", (e) => {
+      item.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartY = e.touches[0].clientY;
+        },
+        { passive: true },
+      );
+
+      item.addEventListener("touchend", (e) => {
+        const touchEndY = e.changedTouches[0].clientY;
+
+        if (Math.abs(touchStartY - touchEndY) > 10) return;
+
+        e.preventDefault();
         e.stopPropagation();
 
         if (activeItem === item) {
-          previewBox.classList.remove("is-show");
-          activeItem = null;
+          hide();
         } else {
           show(item);
         }
       });
     });
 
-    document.addEventListener("click", () => {
-      previewBox.classList.remove("is-show");
-      activeItem = null;
+    previewBox.addEventListener("touchend", (e) => {
+      e.stopPropagation();
+    });
+
+    document.addEventListener("touchstart", () => {
+      hide();
     });
   }
 }
